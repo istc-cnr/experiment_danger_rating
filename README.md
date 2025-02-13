@@ -61,7 +61,7 @@ experiment_danger_rating/
 1. Start the server:
 
 ```bash
-node src/server.js
+node src/server.js s
 ```
 
 2. Open your web browser and navigate to:
