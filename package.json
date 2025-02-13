@@ -9,11 +9,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
+    "build": "mkdir -p build && cp src/*.html build/ && cp src/*.css build/ && cp src/*.js build/",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "node src/server.js"
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
