@@ -71,7 +71,7 @@ const authenticateApiKey = (req, res, next) => {
 // CORS configuration
 const corsOptions = {
     origin: process.env.NODE_ENV === 'production' 
-        ? 'https://your-production-domain.com' 
+        ? 'https://experimentcnr.netlify.app' 
         : 'http://localhost:3000',
     optionsSuccessStatus: 200
 };

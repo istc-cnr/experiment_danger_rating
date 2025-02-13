@@ -20,7 +20,7 @@ async function saveToMongoDB(data, userID) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-API-Key': 'ASIAWOAVSUJEKY2GCFH5' // Hardcode API key for now
+                'X-API-Key': process.env.API_KEY
             },
             body: JSON.stringify({
                 userID: userID,

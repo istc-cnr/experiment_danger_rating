@@ -1,4 +1,4 @@
 const config = {
-    apiKey: 'ASIAWOAVSUJEKY2GCFH5',
+    apiKey: process.env.API_KEY,
     serverUrl: 'http://localhost:3000'
 };
