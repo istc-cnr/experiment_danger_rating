@@ -1,3 +1,5 @@
+import config from './config';
+
 function generateUID() {
     const timestamp = Date.now().toString(36);
     const randomStr = Math.random().toString(36).substr(2, 5);
@@ -16,7 +18,7 @@ async function saveToMongoDB(data, userID) {
     }
 
     try {
-        const response = await fetch('http://localhost:3000/save-data', {
+        const response = await fetch(`${config.apiUrl}/save-data`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
