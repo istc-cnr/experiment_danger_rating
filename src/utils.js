@@ -4,7 +4,7 @@ function generateUID() {
 
 async function saveToMongoDB(data, userID) {
     try {
-        const response = await fetch('http://localhost:3000/save-data', {
+        const response = await fetch('https://istc-cnr.github.io/experiment_danger_rating/save-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
