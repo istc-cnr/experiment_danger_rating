@@ -4,7 +4,7 @@ const config = {
         apiKey: process.env.API_KEY || 'your-dev-api-key'
     },
     production: {
-        apiUrl: process.env.API_URL || 'https://experimentcnr.netlify.app',
+        apiUrl: 'https://istc-cnr.github.io/experiment_danger_rating',
         apiKey: process.env.API_KEY
     }
 };

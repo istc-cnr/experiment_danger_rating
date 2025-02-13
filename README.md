@@ -40,6 +40,7 @@ npm install
 ```
 MONGODB_URI=your_mongodb_connection_string
 API_KEY=...
+API_URL=https://istc-cnr.github.io/experiment_danger_rating
 NODE_ENV=development
 ```
 
@@ -97,6 +98,47 @@ Responses are stored in MongoDB with the following structure:
 - Backend: Node.js, Express
 - Database: MongoDB
 - Libraries: jsPsych, Font Awesome
+
+## Deploying to GitHub Pages
+
+To deploy the `main` branch of this repository to GitHub Pages, follow these steps:
+
+1. Create a new file `.github/workflows/deploy.yml` with the following content:
+
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+```
+
+2. Commit and push your changes to the `main` branch.
+
+3. Go to the repository settings on GitHub, scroll down to the "GitHub Pages" section, and select the `gh-pages` branch as the source.
+
+4. Your site should be available at `https://<username>.github.io/experiment_danger_rating`.
 
 ## License
 
