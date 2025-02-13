@@ -59,7 +59,7 @@
     async function loadExperiment() {
         try {
             const [sentencesResponse, instructionsResponse] = await Promise.all([
-                fetch('/data/randomized_sentences.json'),
+                fetch('randomized_sentences.json'),
                 fetch('instructions.html')
             ]);
             

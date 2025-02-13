@@ -10,12 +10,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
-    "build": "mkdir -p build && \
-      cp src/*.html build/ && \
-      cp src/*.css build/ && \
-      cp src/*.js build/ && \
-      mkdir -p build/data && \
-      cp data/*.json build/data/",
+    "build": "mkdir -p build && cp src/* build/" ,
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
