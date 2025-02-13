@@ -39,6 +39,8 @@ npm install
 
 ```
 MONGODB_URI=your_mongodb_connection_string
+API_KEY=...
+NODE_ENV=development
 ```
 
 ## Project Structure
