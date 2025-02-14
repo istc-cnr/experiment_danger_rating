@@ -7,6 +7,7 @@ require('dotenv').config();
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(express.static(path.join(__dirname, '..')));
@@ -19,9 +20,27 @@ const MONGODB_URI = process.env.MONGODB_URI;
 const EXPERIMENT_PASSWORD = process.env.EXPERIMENT_PASSWORD;
 
 app.post('/verify-password', (req, res) => {
-    const { password } = req.body;
-    const isValid = password === EXPERIMENT_PASSWORD;
-    res.json({ valid: isValid });
+    try {
+        const { password } = req.body;
+        if (!password) {
+            return res.status(400).json({ 
+                valid: false, 
+                message: 'Password is required' 
+            });
+        }
+        
+        const isValid = password === EXPERIMENT_PASSWORD;
+        res.json({ 
+            valid: isValid,
+            message: isValid ? 'Success' : 'Invalid password'
+        });
+    } catch (error) {
+        console.error('Password verification error:', error);
+        res.status(500).json({ 
+            valid: false, 
+            message: 'Server error during verification' 
+        });
+    }
 });
 
 app.post('/save-data', async (req, res) => {
