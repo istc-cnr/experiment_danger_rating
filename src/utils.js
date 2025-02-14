@@ -27,3 +27,25 @@ async function saveToMongoDB(data, userID) {
         throw error;
     }
 }
+
+async function checkPassword(password) {
+    try {
+        const response = await fetch('/verify-password', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ password })
+        });
+        
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        
+        const result = await response.json();
+        return result.valid;
+    } catch (error) {
+        console.error('Error checking password:', error);
+        throw error;
+    }
+}
