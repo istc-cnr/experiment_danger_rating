@@ -16,13 +16,6 @@ app.get('/', (req, res) => {
 });
 
 const MONGODB_URI = process.env.MONGODB_URI;
-const EXPERIMENT_PASSWORD = process.env.EXPERIMENT_PASSWORD;
-
-app.post('/verify-password', (req, res) => {
-    const { password } = req.body;
-    const isValid = password === EXPERIMENT_PASSWORD;
-    res.json({ valid: isValid });
-});
 
 app.post('/save-data', async (req, res) => {
     try {

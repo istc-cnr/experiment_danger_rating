@@ -13,10 +13,6 @@
 </head>
 <body></body>
 <script>
-    if (!sessionStorage.getItem('authenticated')) {
-        window.location.href = 'login.html';
-    }
-    
     const userID = generateUID();
     
     const jsPsych = initJsPsych({

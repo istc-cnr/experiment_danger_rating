@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18"
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
@@ -24,10 +24,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Set environment variables
-        run: |
-          echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> $GITHUB_ENV
-          echo "EXPERIMENT_PASSWORD=${{ secrets.EXPERIMENT_PASSWORD }}" >> $GITHUB_ENV
+      - name: Set MONGODB_URI environment variable
+        run: echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> $GITHUB_ENV
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

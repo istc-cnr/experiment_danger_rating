@@ -10,8 +10,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
-    "build": "mkdir -p build && cp src/*.html build/ && cp src/*.css build/ && cp src/*.js build/ && cp src/data/*.json build/" ,
-    "predeploy": "npm run build",
+    "clean": "rm -rf build/*",
+    "build": "mkdir -p build && cp src/*.html build/ && cp src/*.css build/ && cp src/*.js build/ && cp src/data/*.json build/",
+    "predeploy": "npm run clean && npm run build",
     "deploy": "gh-pages -d build"
   },
   "keywords": [],
