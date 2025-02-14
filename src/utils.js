@@ -34,20 +34,18 @@ async function checkPassword(password) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Accept': 'application/json'
             },
             body: JSON.stringify({ password })
         });
         
         if (!response.ok) {
-            const errorText = await response.text();
-            throw new Error(`Server returned ${response.status}: ${errorText}`);
+            throw new Error('Network response was not ok');
         }
         
         const result = await response.json();
         return result.valid;
     } catch (error) {
         console.error('Error checking password:', error);
-        throw new Error('Failed to verify password. Please try again.');
+        throw error;
     }
 }

@@ -7,43 +7,26 @@
 <body>
     <div class="login-container">
         <h2>Experiment Access</h2>
-        <form class="login-form" onsubmit="handleSubmit(event)">
-            <input type="password" 
-                   id="password" 
-                   name="password"
-                   required
-                   placeholder="Enter Password" />
-            <button type="submit" class="login-button">Login</button>
+        <div class="login-form">
+            <input type="password" id="password" placeholder="Enter Password" />
+            <button onclick="verifyPassword()" class="login-button">Login</button>
             <p id="error-message" class="error-message"></p>
-        </form>
+        </div>
     </div>
     <script src="utils.js"></script>
     <script>
-        async function handleSubmit(event) {
-            event.preventDefault();
+        async function verifyPassword() {
             const password = document.getElementById('password').value;
-            const errorMsg = document.getElementById('error-message');
-            const submitBtn = document.querySelector('.login-button');
-            
             try {
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Verifying...';
-                errorMsg.textContent = '';
-                
                 const isValid = await checkPassword(password);
-                
                 if (isValid) {
                     sessionStorage.setItem('authenticated', 'true');
                     window.location.href = 'index.html';
                 } else {
-                    errorMsg.textContent = 'Invalid password';
+                    document.getElementById('error-message').textContent = 'Invalid password';
                 }
             } catch (error) {
-                console.error('Login error:', error);
-                errorMsg.textContent = 'Error verifying password. Please try again.';
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Login';
+                document.getElementById('error-message').textContent = 'Error verifying password';
             }
         }
     </script>
