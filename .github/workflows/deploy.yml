@@ -21,14 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install nodemon
-        run: npm install -g nodemon
-
       - name: Build project
         run: npm run build
-
-      - name: Watch for changes
-        run: npm run watch &
 
       - name: Set environment variables
         run: |
