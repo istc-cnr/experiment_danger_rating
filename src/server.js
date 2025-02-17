@@ -5,7 +5,16 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+
+// Configure CORS
+const corsOptions = {
+    origin: ['http://localhost:3000', 'https://istc-cnr.github.io'],
+    methods: ['GET', 'POST'],
+    credentials: true,
+    optionsSuccessStatus: 204
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'build')));
@@ -27,22 +36,37 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'ok' });
+});
+
 const MONGODB_URI = process.env.MONGODB_URI;
 app.post('/save-data', async (req, res) => {
     try {
-        const client = new MongoClient(MONGODB_URI);
+        const client = new MongoClient(MONGODB_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
+        
         await client.connect();
+        console.log('Connected to MongoDB');
         
         const db = client.db('CNR_Danger_Rating');
         const collection = db.collection('user_responses');
         
-        await collection.insertOne(req.body);
+        const result = await collection.insertOne(req.body);
+        console.log('Data saved:', result.insertedId);
+        
         await client.close();
         
-        res.json({ success: true });
+        res.json({ success: true, id: result.insertedId });
     } catch (error) {
         console.error('Database error:', error);
-        res.status(500).json({ error: error.message });
+        res.status(500).json({ 
+            error: error.message,
+            stack: process.env.NODE_ENV === 'development' ? error.stack : undefined 
+        });
     }
 });
 

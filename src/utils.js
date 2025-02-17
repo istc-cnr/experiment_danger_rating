@@ -3,11 +3,17 @@ function generateUID() {
 }
 
 async function saveToMongoDB(data, userID) {
+    // Get the current hostname to determine the API endpoint
+    const apiBase = window.location.hostname === 'localhost' 
+        ? 'http://localhost:3000'
+        : 'https://istc-cnr.github.io/experiment_danger_rating';
+
     try {
-        const response = await fetch('/save-data', {
+        const response = await fetch(`${apiBase}/save-data`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Accept': 'application/json',
             },
             body: JSON.stringify({
                 user_id: userID,
@@ -17,7 +23,8 @@ async function saveToMongoDB(data, userID) {
         });
 
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            const errorData = await response.text();
+            throw new Error(`HTTP error! status: ${response.status}, message: ${errorData}`);
         }
 
         return await response.json();
