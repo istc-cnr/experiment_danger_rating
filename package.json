@@ -3,18 +3,22 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongodb": "^6.13.0"
+    "mongodb": "^6.13.0",
+    "netlify-cli": "^12.0.0",
+    "@netlify/functions": "^2.0.0"
   },
   "name": "exp",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
-    "build": "mkdir -p build && cp src/*.html build/ && cp src/*.css build/ && cp src/*.js build/ && cp src/*.json build/",
-    "predeploy": "npm run build",
+    "build": "mkdir -p build && cp -r src/* build/ && npm install",
+    "build:functions": "cd netlify/functions && npm install",
+    "predeploy": "npm run build && npm run build:functions",
     "deploy": "gh-pages -d build",
     "watch": "nodemon --watch src -e js,html,css,json --exec 'npm run build'",
-    "deploy-server": "gcloud app deploy"
+    "deploy-server": "gcloud app deploy",
+    "dev": "netlify dev"
   },
   "keywords": [],
   "author": "",

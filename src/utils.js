@@ -3,17 +3,16 @@ function generateUID() {
 }
 
 async function saveToMongoDB(data, userID) {
-    // Get the current hostname to determine the API endpoint
-    const apiBase = window.location.hostname === 'localhost' 
-        ? 'http://localhost:3000'
-        : 'https://istc-cnr.github.io/experiment_danger_rating';
-
+    const apiUrl = window.location.hostname === 'localhost' 
+        ? 'http://localhost:8888/.netlify/functions/save-data'
+        : 'https://experimentcnr.netlify.app/.netlify/functions/save-data';
+    
+    console.log('Attempting to save data to:', apiUrl); // Debug log
     try {
-        const response = await fetch(`${apiBase}/save-data`, {
+        const response = await fetch(apiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Accept': 'application/json',
             },
             body: JSON.stringify({
                 user_id: userID,

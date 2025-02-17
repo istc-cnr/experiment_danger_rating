@@ -1,0 +1,26 @@
+[build]
+  command = "npm run predeploy"
+  functions = "netlify/functions"
+  publish = "build"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[dev]
+  command = "npm run start"
+  port = 8888
+  publish = "build"
+  functionsPort = 8888
+
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Response = {Status = [404]}}
