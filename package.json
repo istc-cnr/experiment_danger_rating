@@ -10,7 +10,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
-    "build": "mkdir -p build && cp src/*.html build/ && cp src/*.css build/ && cp src/*.js build/ && cp src/data/*.json build/",
+    "build": "mkdir -p build && cp src/*.html build/ && cp src/*.css build/ && cp src/*.js build/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "watch": "nodemon --watch src -e js,html,css,json --exec 'npm run build'"
