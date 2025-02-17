@@ -58,11 +58,23 @@
 
     async function loadExperiment() {
         try {
+            const baseUrl = window.location.pathname.endsWith('/') 
+                ? window.location.pathname 
+                : window.location.pathname + '/';
+                
             const [sentencesResponse, instructionsResponse] = await Promise.all([
-                fetch('randomized_sentences.json'),
-                fetch('instructions.html')
+                fetch(new URL('randomized_sentences.json', window.location.href)),
+                fetch(new URL('instructions.html', window.location.href))
             ]);
             
+            if (!sentencesResponse.ok) {
+                throw new Error(`Failed to load sentences: ${sentencesResponse.status}`);
+            }
+
+            if (!instructionsResponse.ok) {
+                throw new Error(`Failed to load instructions: ${instructionsResponse.status}`);
+            }
+
             const sentences = await sentencesResponse.json();
             const instructionsContent = await instructionsResponse.text();
             const welcome = {
