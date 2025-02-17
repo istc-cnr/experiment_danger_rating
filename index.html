@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Learning Experiment</title>
+    <script src="https://unpkg.com/jspsych@7.3.3"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
+    <link href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="utils.js"></script>
+</head>
+<body></body>
+<script>
+    const userID = generateUID();
+    
+    const jsPsych = initJsPsych({
+        show_progress_bar: true,
+        message_progress_bar: 'Progress',
+        on_finish: function() {
+            const data = jsPsych.data.get();
+            const cleanTrials = data.trials
+                .filter(trial => trial.trial_type === 'sentence_rating')
+                .map(trial => ({
+                    english: trial.english,
+                    italian: trial.italian,
+                    danger_rating: trial.danger_rating,
+                    response_time_ms: trial.rt,
+                    trial_number: trial.trial_index
+                }));
+                
+            const finalData = {
+                trials: cleanTrials,
+                total_time_ms: data.trials[data.trials.length - 1].time_elapsed
+            };
+
+            saveToMongoDB(finalData, userID)
+                .then(() => {
+                    document.body.innerHTML = `
+                        <div style="text-align: center; margin-top: 50px;">
+                            <h2>Thank you for participating!</h2>
+                            <p>Your responses have been saved.</p>
+                            <p>You may close this window.</p>
+                        </div>
+                    `;
+                }).catch(error => {
+                    console.error('Failed to save data:', error);
+                    document.body.innerHTML = `
+                        <div style="text-align: center; margin-top: 50px;">
+                            <h2>Error Saving Data</h2>
+                            <p>There was a problem saving your responses. Please contact the experiment administrator.</p>
+                        </div>
+                    `;
+                });
+        }
+    });
+
+    async function loadExperiment() {
+        try {
+            const [sentencesResponse, instructionsResponse] = await Promise.all([
+                fetch('randomized_sentences.json'),
+                fetch('instructions.html')
+            ]);
+            
+            const sentences = await sentencesResponse.json();
+            const instructionsContent = await instructionsResponse.text();
+            const welcome = {
+                type: jsPsychHtmlButtonResponse,
+                stimulus: `
+                    <h1>Welcome to the Sentence Danger Rating Experiment</h1>
+                    <p>You will evaluate English-Italian sentence pairs for their level of danger.</p>
+                `,
+                choices: ['Start the experiment'],
+                button_html: '<button class="jspsych-btn" style="background-color: #3498db; color: white; font-size: 18px; padding: 10px 30px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">%choice%</button>'
+            };
+
+            const instructions = {
+                type: jsPsychHtmlButtonResponse,
+                stimulus: instructionsContent,
+                choices: ['Start Rating!'],
+                button_html: '<button class="jspsych-btn" style="background-color: #3498db; color: white; font-size: 18px; padding: 10px 30px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">%choice%</button>'
+            };
+
+            let currentRating = null;
+            const trials = sentences.map(pair => ({
+                type: jsPsychHtmlButtonResponse,
+                stimulus: function() {
+                    currentRating = null;
+                    return `
+                        <div class="sentence-pair" role="region" aria-label="Sentence Pair">
+                            <div class="english" role="text" lang="en">${pair.English}</div>
+                            <div class="italian" role="text" lang="it">${pair.Italian}</div>
+                        </div>
+                        <div class="rating-container" role="region" aria-label="Danger Rating">
+                            <h3>How dangerous is this sentence?</h3>
+                            <div class="rating-scale">
+                                <div class="rating-buttons" role="radiogroup" aria-label="Danger rating scale from 0 to 9">
+                                    ${Array.from({length: 10}, (_, i) => 
+                                        `<button 
+                                            class="rating-button" 
+                                            data-rating="${i}" 
+                                            role="radio" 
+                                            aria-checked="false"
+                                            aria-label="Rating ${i}"
+                                        >${i}</button>`
+                                    ).join('')}
+                                </div>
+                                <div class="scale-labels">
+                                    <div class="scale-label left" aria-hidden="true">Very Safe</div>
+                                    <div class="scale-label right" aria-hidden="true">Very Dangerous</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                },
+                choices: ['Next'],
+                button_html: '<button class="jspsych-btn" style="background-color: #3498db; color: white; font-size: 18px; padding: 10px 30px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">%choice%</button>',
+                on_load: function() {
+                    const nextButton = document.querySelector('.jspsych-btn');
+                    nextButton.disabled = true;
+                    nextButton.classList.add('btn-next');
+                    
+                    document.querySelectorAll('.rating-button').forEach(button => {
+                        button.addEventListener('click', function() {
+                            document.querySelectorAll('.rating-button').forEach(b => {
+                                b.classList.remove('selected');
+                                b.setAttribute('aria-checked', 'false');
+                            });
+                            
+                            this.classList.add('selected');
+                            this.setAttribute('aria-checked', 'true');
+                            currentRating = parseInt(this.dataset.rating);
+                            
+                            nextButton.disabled = false;
+                            nextButton.classList.add('ready');
+                        });
+                    });
+                },
+                on_finish: function(data) {
+                    data.english = pair.English;
+                    data.italian = pair.Italian;
+                    data.danger_rating = currentRating;
+                    data.trial_type = 'sentence_rating';
+                    data.user_id = userID;
+                }
+            }));
+
+            const end = {
+                type: jsPsychHtmlButtonResponse,
+                stimulus: `
+                    <h2>Thank you!</h2>
+                    <p>The experiment is now complete.</p>
+                `,
+                choices: ['Finish'],
+                button_html: '<button class="jspsych-btn" style="background-color: #3498db; color: white; font-size: 18px; padding: 10px 30px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">%choice%</button>'
+            };
+
+            // Create timeline
+            const timeline = [
+                welcome,
+                instructions,
+                ...trials,
+                end
+            ];
+
+            jsPsych.run(timeline);
+
+        } catch (error) {
+            console.error('Error loading sentences:', error);
+            document.body.innerHTML = 'Error loading experiment. Please check the console for details.';
+        }
+    }
+
+    loadExperiment();
+</script>
+</html>
