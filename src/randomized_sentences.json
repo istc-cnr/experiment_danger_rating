@@ -1,10 +1,1034 @@
 [
-  {
-    "English": "The dog is playing in the garden.",
-    "Italian": "Il cane sta giocando in giardino."
-  },
-  {
-    "English": "There is a spider in the room.",
-    "Italian": "C'è un ragno nella stanza."
-  }
+    {
+        "English": "She is passing over a safety barrier",
+        "Italian": "Sta passando sopra una barriera di sicurezza"
+    },
+    {
+        "English": "He is hiking a mountain wearing flip-flops",
+        "Italian": "Sta scalando una montagna indossando infradito"
+    },
+    {
+        "English": "He is avoiding camping due to a storm warning",
+        "Italian": "Sta evitando di accamparsi a causa di un avviso di tempesta"
+    },
+    {
+        "English": "The newborn sleeps on his back",
+        "Italian": "Il neonato dorme sulla schiena"
+    },
+    {
+        "English": "She is taking a shortcut through a construction site",
+        "Italian": "Sta prendendo una scorciatoia attraverso un cantiere"
+    },
+    {
+        "English": "He is fixing a broken elevator",
+        "Italian": "Sta riparando un ascensore rotto"
+    },
+    {
+        "English": "He is heading to the hill after a tsunami alert",
+        "Italian": "Sta andando in collina dopo un'allerta tsunami"
+    },
+    {
+        "English": "The man crosses the road",
+        "Italian": "L'uomo attraversa la strada"
+    },
+    {
+        "English": "He didn't see the low branch",
+        "Italian": "Non ha visto il ramo basso"
+    },
+    {
+        "English": "He touches broken glasses",
+        "Italian": "Tocca i bicchieri rotti"
+    },
+    {
+        "English": "He is fencing a slippery path",
+        "Italian": "Sta recintando un sentiero scivoloso"
+    },
+    {
+        "English": "She is fixing a plugged TV",
+        "Italian": "Sta riparando una TV collegata"
+    },
+    {
+        "English": "She crosses the road outside the crosswalk",
+        "Italian": "Attraversa la strada fuori dalle strisce pedonali"
+    },
+    {
+        "English": "He is hiking a mountain wearing a fisherman hat",
+        "Italian": "Sta scalando una montagna indossando un cappello da pescatore"
+    },
+    {
+        "English": "He left the faucet open",
+        "Italian": "Ha lasciato il rubinetto aperto"
+    },
+    {
+        "English": "He left the dishwasher unattended",
+        "Italian": "Ha lasciato la lavastoviglie incustodita"
+    },
+    {
+        "English": "He is speeding through a countryside area",
+        "Italian": "Sta andando a tutta velocità in una zona di campagna"
+    },
+    {
+        "English": "He didn't see the high branch",
+        "Italian": "Non ha visto il ramo alto"
+    },
+    {
+        "English": "The man is walking alone on a dark street",
+        "Italian": "L’uomo sta camminando da solo in una strada buia"
+    },
+    {
+        "English": "She is playing with animals in the forest",
+        "Italian": "Sta giocando con gli animali nella foresta"
+    },
+    {
+        "English": "She is using a hairdryer in the bathtub",
+        "Italian": "Sta usando un asciugacapelli nella vasca da bagno"
+    },
+    {
+        "English": "She is going away from a lightning storm",
+        "Italian": "Si sta allontanando da un temporale"
+    },
+    {
+        "English": "She is drying her hair with dry hands",
+        "Italian": "Si sta asciugando i capelli con le mani asciutte"
+    },
+    {
+        "English": "The old man is cutting meat with a knife",
+        "Italian": "Il vecchio sta tagliando la carne con un coltello"
+    },
+    {
+        "English": "The girl is walking alone on a dark street",
+        "Italian": "La bambina sta camminando da sola in una strada buia"
+    },
+    {
+        "English": "He is climbing a wet ladder",
+        "Italian": "Sta salendo una scala bagnata"
+    },
+    {
+        "English": "She is using her phone while taking a bath",
+        "Italian": "Sta usando il suo telefono mentre fa il bagno"
+    },
+    {
+        "English": "She is walking near parked cars",
+        "Italian": "Sta camminando vicino alle auto parcheggiate"
+    },
+    {
+        "English": "She is wearing dry clothes at the North Pole",
+        "Italian": "Indossa vestiti asciutti al Polo Nord"
+    },
+    {
+        "English": "He is catching the falling knife",
+        "Italian": "Sta prendendo un coltello che cade"
+    },
+    {
+        "English": "The abandoned house catches fire",
+        "Italian": "La casa abbandonata prende fuoco"
+    },
+    {
+        "English": "He fell asleep in the dinghy",
+        "Italian": "Si è addormentato nel canotto"
+    },
+    {
+        "English": "They hiked on the marked trail",
+        "Italian": "Hanno camminato sul sentiero segnalato"
+    },
+    {
+        "English": "He is driving at night without headlights",
+        "Italian": "Sta guidando di notte senza fari"
+    },
+    {
+        "English": "She is using her phone while taking a sunbath",
+        "Italian": "Sta usando il suo telefono mentre prende il sole"
+    },
+    {
+        "English": "He smokes on the terrace",
+        "Italian": "Lui fuma in terrazza"
+    },
+    {
+        "English": "She is drinking dirty water",
+        "Italian": "Sta bevendo acqua sporca"
+    },
+    {
+        "English": "He is walking on the frozen lake in winter",
+        "Italian": "Sta camminando sul lago ghiacciato in inverno"
+    },
+    {
+        "English": "He drives fast along the winding road",
+        "Italian": "Guida veloce lungo la strada tortuosa"
+    },
+    {
+        "English": "They stayed in the sun too long",
+        "Italian": "Sono rimasti al sole troppo a lungo"
+    },
+    {
+        "English": "She hurries across hot sidewalks",
+        "Italian": "Corre veloce sui marciapiedi caldi"
+    },
+    {
+        "English": "The newborn sleeps on his stomach",
+        "Italian": "Il neonato dorme a pancia in giù"
+    },
+    {
+        "English": "He drives while looking at the road",
+        "Italian": "Guida guardando la strada"
+    },
+    {
+        "English": "She didn’t lock the fridge at night",
+        "Italian": "Non ha chiuso il frigorifero di notte"
+    },
+    {
+        "English": "He is playing with a loaded gun",
+        "Italian": "Sta giocando con un pistola carica"
+    },
+    {
+        "English": "He is climbing a dry ladder",
+        "Italian": "Sta salendo una scala asciutta"
+    },
+    {
+        "English": "She is walking near moving cars",
+        "Italian": "Sta camminando vicino alle auto in movimento"
+    },
+    {
+        "English": "He is swimming perpendicularly to a rip current",
+        "Italian": "Sta nuotando ortogonalmente rispetto alla corrente"
+    },
+    {
+        "English": "They hiked off the marked trail",
+        "Italian": "Hanno camminato fuori dal sentiero segnalato"
+    },
+    {
+        "English": "He listens to loud music on New Year’s Eve",
+        "Italian": "Ascolta musica ad alto volume la notte di Capodanno"
+    },
+    {
+        "English": "She ignores the railing while climbing",
+        "Italian": "Ignora la ringhiera mentre sale"
+    },
+    {
+        "English": "He got a cramp while swimming",
+        "Italian": "Ha avuto un crampo mentre nuotava"
+    },
+    {
+        "English": "He is ignoring a storm warning before camping",
+        "Italian": "Sta ignorando un avviso di tempesta prima di accamparsi"
+    },
+    {
+        "English": "She is touching a cold stove",
+        "Italian": "Sta toccando una stufa fredda"
+    },
+    {
+        "English": "He lost his house broom",
+        "Italian": "Ha perso la scopa di casa"
+    },
+    {
+        "English": "She is approaching a lightning storm",
+        "Italian": "Si sta avvicinando a un temporale"
+    },
+    {
+        "English": "She holds the scissors close to her eye",
+        "Italian": "Tiene le forbici vicine all'occhio"
+    },
+    {
+        "English": "He is driving fast in remote lands",
+        "Italian": "Sta guidando velocemente in luoghi remoti terre"
+    },
+    {
+        "English": "She accepted a drink from a stranger",
+        "Italian": "Ha accettato un drink da un straniero"
+    },
+    {
+        "English": "She crosses the road on the crosswalk",
+        "Italian": "Attraversa la strada sulle strisce pedonali"
+    },
+    {
+        "English": "She put profits before safety",
+        "Italian": "Ha messo i profitti prima della sicurezza"
+    },
+    {
+        "English": "She is standing on a train platform",
+        "Italian": "Lei è in piedi su una banchina del treno"
+    },
+    {
+        "English": "He eats undercooked pasta",
+        "Italian": "Mangia pasta poco cotta"
+    },
+    {
+        "English": "They stayed in the sun too little",
+        "Italian": "Sono rimasti al sole troppo poco"
+    },
+    {
+        "English": "She is sunbathing with sunscreen",
+        "Italian": "Sta prendendo il sole con la protezione solare"
+    },
+    {
+        "English": "He drives fast along the straight road",
+        "Italian": "Guida veloce lungo la strada dritta"
+    },
+    {
+        "English": "He is walking on a slippery path",
+        "Italian": "Sta camminando su un sentiero scivoloso"
+    },
+    {
+        "English": "They left their coats unattended at the bar",
+        "Italian": "Hanno lasciato i loro cappotti incustoditi al bar"
+    },
+    {
+        "English": "She is standing on a wheelchair",
+        "Italian": "È in piedi su una sedia a rotelle"
+    },
+    {
+        "English": "He is driving fast in heavy fog",
+        "Italian": "Sta guidando velocemente nella nebbia fitta"
+    },
+    {
+        "English": "He is passing a red light",
+        "Italian": "Sta superando un semaforo rosso"
+    },
+    {
+        "English": "He passes under the scaffolding",
+        "Italian": "Passa sotto l'impalcatura"
+    },
+    {
+        "English": "She holds the scissors close to her foot",
+        "Italian": "Tiene le forbici vicine al piede"
+    },
+    {
+        "English": "He is driving in the fog without lights",
+        "Italian": "Sta guidando nella nebbia senza luci"
+    },
+    {
+        "English": "She is cutting her finger",
+        "Italian": "Si sta tagliando un dito"
+    },
+    {
+        "English": "She is bicycling without gloves",
+        "Italian": "Sta andando in bicicletta senza guanti"
+    },
+    {
+        "English": "He is hiking in the mountains without a map",
+        "Italian": "Sta facendo un'escursione in montagna senza una mappa"
+    },
+    {
+        "English": "She is touching a hot stove",
+        "Italian": "Sta toccando una stufa calda"
+    },
+    {
+        "English": "They left their drinks unattended at the bar",
+        "Italian": "Hanno lasciato i loro drink incustoditi al bar"
+    },
+    {
+        "English": "He approached the shark in the ocean",
+        "Italian": "Si è avvicinato allo squalo nell'oceano"
+    },
+    {
+        "English": "He is standing behind a railing",
+        "Italian": "Lui è in piedi dietro una ringhiera"
+    },
+    {
+        "English": "He is driving with seatbelts",
+        "Italian": "Sta guidando con le cinture di sicurezza"
+    },
+    {
+        "English": "She is feeding bears at the zoo",
+        "Italian": "Sta dando da mangiare agli orsi allo zoo"
+    },
+    {
+        "English": "She put safety before profits",
+        "Italian": "Ha messo la sicurezza prima dei profitti"
+    },
+    {
+        "English": "He drives along the highway sleepily",
+        "Italian": "Lui guida lungo l'autostrada assonnato"
+    },
+    {
+        "English": "He is entering the desert with little water",
+        "Italian": "Sta entrando nel deserto con poca acqua"
+    },
+    {
+        "English": "She is bicycling without hands",
+        "Italian": "Sta andando in bicicletta senza mani"
+    },
+    {
+        "English": "She is skiing off track",
+        "Italian": "Sta sciando fuori pista"
+    },
+    {
+        "English": "The man is playing with pills",
+        "Italian": "L'uomo sta giocando con le pillole"
+    },
+    {
+        "English": "He eats undercooked meat",
+        "Italian": "Mangia carne poco cotta"
+    },
+    {
+        "English": "She is smoking at a petrol station",
+        "Italian": "Lei sta fumando in una stazione di servizio"
+    },
+    {
+        "English": "He eats expired eggs",
+        "Italian": "Ha mangia uova scadute"
+    },
+    {
+        "English": "He is touching a disabled wire",
+        "Italian": "Sta toccando un filo elettrico non funzionante"
+    },
+    {
+        "English": "He is driving fast in a small village",
+        "Italian": "Sta guidando veloce in un piccolo villaggio"
+    },
+    {
+        "English": "He is running downhill with dirty shoelaces",
+        "Italian": "Sta correndo in discesa con i lacci delle scarpe sporchi"
+    },
+    {
+        "English": "He is crossing the street without talking",
+        "Italian": "Sta attraversando la strada senza parlare"
+    },
+    {
+        "English": "He lost his house key",
+        "Italian": "Ha perso le chiavi di casa"
+    },
+    {
+        "English": "He is walking on the frozen lake in spring",
+        "Italian": "Sta camminando sul lago ghiacciato in primavera"
+    },
+    {
+        "English": "He is waiting at a red light",
+        "Italian": "Sta aspettando a un semaforo rosso"
+    },
+    {
+        "English": "She is walking on the edge of a cliff",
+        "Italian": "Sta camminando sul bordo di un dirupo"
+    },
+    {
+        "English": "He touches broken spoons",
+        "Italian": "Tocca i cucchiai rotti"
+    },
+    {
+        "English": "He is driving without seatbelts",
+        "Italian": "Sta guidando senza le cinture di sicurezza"
+    },
+    {
+        "English": "They ate raw shellfish at the restaurant",
+        "Italian": "Hanno mangiato crostacei crudi al ristorante"
+    },
+    {
+        "English": "He listens to loud music all day long",
+        "Italian": "Ascolta musica ad alto volume tutto il giorno"
+    },
+    {
+        "English": "He sleeps near the river during fireworks",
+        "Italian": "Dorme vicino al fiume durante i fuochi d'artificio"
+    },
+    {
+        "English": "She is pulling a tray out of the stove without a mitt",
+        "Italian": "Sta tirando fuori un vassoio dal forno senza un guanto"
+    },
+    {
+        "English": "She got lost in the mountains in the evening",
+        "Italian": "Si è persa in montagna la sera"
+    },
+    {
+        "English": "He left the bathroom open",
+        "Italian": "Ha lasciato il bagno aperto"
+    },
+    {
+        "English": "The isolated house catches fire",
+        "Italian": "La casa isolata prende fuoco"
+    },
+    {
+        "English": "She is taking selfies on a skyscraper ledge",
+        "Italian": "Si sta scattando dei selfie sul bordo di un grattacielo"
+    },
+    {
+        "English": "He is looking at an ice hole",
+        "Italian": "Sta guardando un buco nel ghiaccio"
+    },
+    {
+        "English": "He is cleaning a live socket with a dry cloth",
+        "Italian": "Sta pulendo una presa sotto tensione con un panno asciutto"
+    },
+    {
+        "English": "He is falling into an ice hole",
+        "Italian": "Sta cadendo in un buco nel ghiaccio"
+    },
+    {
+        "English": "He is driving with bald tires on a hot road",
+        "Italian": "Sta guidando con le gomme lisce su una strada bollente"
+    },
+    {
+        "English": "He smokes in bed",
+        "Italian": "Lui fuma a letto"
+    },
+    {
+        "English": "She didn’t see the bus coming",
+        "Italian": "Non ha visto arrivare l'autobus"
+    },
+    {
+        "English": "The dog crosses the road",
+        "Italian": "Il cane attraversa la strada"
+    },
+    {
+        "English": "He is swimming with a strong current",
+        "Italian": "Sta nuotando con una forte corrente"
+    },
+    {
+        "English": "He runs in the park",
+        "Italian": "Lui corre nel parco"
+    },
+    {
+        "English": "She hurries across icy sidewalks",
+        "Italian": "Corre veloce sui marciapiedi ghiacciati"
+    },
+    {
+        "English": "He is riding a motorcycle without a helmet",
+        "Italian": "Sta guidando una motocicletta senza casco"
+    },
+    {
+        "English": "The child is taking candy from a stranger",
+        "Italian": "Il bambino sta prendendo caramelle da uno sconosciuto"
+    },
+    {
+        "English": "She is wearing wet clothes at the North Pole",
+        "Italian": "Indossa vestiti bagnati al Polo Nord"
+    },
+    {
+        "English": "He is jumping on the elastic mat",
+        "Italian": "Lui sta saltando sul tappetino elastico"
+    },
+    {
+        "English": "He leans against train doors",
+        "Italian": "Si appoggia alle porte del treno"
+    },
+    {
+        "English": "The boy is fixing live wires",
+        "Italian": "Il bambino sta riparando fili elettrici"
+    },
+    {
+        "English": "She is taking selfies with a skyscraper in the background",
+        "Italian": "Si sta scattando dei selfie con un grattacielo sullo sfondo"
+    },
+    {
+        "English": "He is showing a red flag to the bull",
+        "Italian": "Sta mostrando una bandiera rossa al toro"
+    },
+    {
+        "English": "He is lighting a fire in the woods",
+        "Italian": "Sta accendendo un fuoco nel bosco"
+    },
+    {
+        "English": "He is entering the desert with a lot of water",
+        "Italian": "Sta entrando nel deserto con molta acqua"
+    },
+    {
+        "English": "She is touching a broken doll",
+        "Italian": "Sta toccando una bambola rotta"
+    },
+    {
+        "English": "He is cycling with brakes",
+        "Italian": "Sta pedalando con i freni"
+    },
+    {
+        "English": "They ate raw shellfish at the roadside stand",
+        "Italian": "Hanno mangiato crostacei crudi al chiosco lungo la strada"
+    },
+    {
+        "English": "He is heading to the beach after a tsunami alert",
+        "Italian": "Sta andando in spiaggia dopo un'allerta tsunami"
+    },
+    {
+        "English": "He is missing the falling knife",
+        "Italian": "Non riesce a prendere il coltello che cade"
+    },
+    {
+        "English": "He is texting while driving his car",
+        "Italian": "Sta mandando messaggi mentre guida la sua auto"
+    },
+    {
+        "English": "He is walking at the railroad station",
+        "Italian": "Sta camminando nella stazione ferroviaria"
+    },
+    {
+        "English": "He is charging his phone while taking a bath",
+        "Italian": "Sta caricando il telefono mentre fa il bagno"
+    },
+    {
+        "English": "He crossed the intersection at a red light",
+        "Italian": "Ha attraversato l'incrocio con il semaforo rosso"
+    },
+    {
+        "English": "He is walking over thick ice",
+        "Italian": "Sta camminando sul ghiaccio spesso"
+    },
+    {
+        "English": "She crosses roads without checking",
+        "Italian": "Attraversa la strada senza controllare"
+    },
+    {
+        "English": "She is burning candles before leaving the room",
+        "Italian": "Sta accendendo delle candele prima di uscire stanza"
+    },
+    {
+        "English": "He is trying to take a book from the high shelf",
+        "Italian": "Sta cercando di prendere un libro dallo scaffale alto"
+    },
+    {
+        "English": "She is staying behind a safety barrier",
+        "Italian": "Sta rimanendo dietro una barriera di sicurezza"
+    },
+    {
+        "English": "She is using a hairdryer in bed",
+        "Italian": "Sta usando un asciugacapelli nel letto"
+    },
+    {
+        "English": "He left the stove unattended",
+        "Italian": "Ha lasciato la stufa incustodita"
+    },
+    {
+        "English": "He stands beside train doors",
+        "Italian": "Sta in piedi accanto alle porte del treno"
+    },
+    {
+        "English": "He is charging his phone while sleeping",
+        "Italian": "Sta caricando il telefono mentre dorme"
+    },
+    {
+        "English": "She is standing on train tracks",
+        "Italian": "Lei è in piedi sui binari del treno"
+    },
+    {
+        "English": "He drives while looking at his girlfriend",
+        "Italian": "Guida guardando la sua ragazza"
+    },
+    {
+        "English": "He shelters from lightning strikes indoors",
+        "Italian": "Si ripara dai fulmini al chiuso"
+    },
+    {
+        "English": "She sleeps with contact lenses on",
+        "Italian": "Dorme con le lenti a contatto"
+    },
+    {
+        "English": "She is playing with firecrackers outdoors",
+        "Italian": "Sta giocando con i petardi all'aperto"
+    },
+    {
+        "English": "She falls into the sea from the surfboard",
+        "Italian": "Cade in mare dalla tavola da surf"
+    },
+    {
+        "English": "She didn't lock the door at night",
+        "Italian": "Non ha chiuso la porta di notte"
+    },
+    {
+        "English": "He is jumping from the bridge",
+        "Italian": "Lui sta saltando dal ponte"
+    },
+    {
+        "English": "He approached the shark in the aquarium",
+        "Italian": "Si è avvicinato allo squalo nell'acquario"
+    },
+    {
+        "English": "She is smoking at the steel mill",
+        "Italian": "Lei sta fumando all'acciaieria"
+    },
+    {
+        "English": "He is walking on the railroad tracks",
+        "Italian": "Sta camminando sui binari della ferrovia"
+    },
+    {
+        "English": "The child is near the pool",
+        "Italian": "Il bambino è vicino alla piscina"
+    },
+    {
+        "English": "He is using a chainsaw with safety gear",
+        "Italian": "Sta usando una motosega con dispositivi di sicurezza"
+    },
+    {
+        "English": "She is taking a shortcut through her neighborhood",
+        "Italian": "Sta prendendo una scorciatoia attraverso il suo quartiere"
+    },
+    {
+        "English": "He is speeding through a residential neighborhood",
+        "Italian": "Sta andando a tutta velocità in un quartiere residenziale"
+    },
+    {
+        "English": "He is cleaning a live socket with a wet cloth",
+        "Italian": "Sta pulendo una presa sotto tensione con un panno bagnato"
+    },
+    {
+        "English": "She walks on the wet floor",
+        "Italian": "Cammina sul pavimento bagnato"
+    },
+    {
+        "English": "He is crossing the street without looking",
+        "Italian": "Sta attraversando la strada senza guardare"
+    },
+    {
+        "English": "He is driving with bald tires on a frozen road",
+        "Italian": "Sta guidando con le gomme lisce su una strada ghiacciata"
+    },
+    {
+        "English": "He sleeps near the river during intense rainfall",
+        "Italian": "Dorme vicino al fiume durante le forti piogge"
+    },
+    {
+        "English": "He dived into the pool after checking the depth",
+        "Italian": "Si è tuffato in piscina dopo aver controllato la profondità"
+    },
+    {
+        "English": "He is leaving the stove on before heading out",
+        "Italian": "Sta lasciando la stufa accesa prima di uscire"
+    },
+    {
+        "English": "The pregnant woman is eating raw meat",
+        "Italian": "La donna incinta sta mangiando carne cruda"
+    },
+    {
+        "English": "He is running downhill with untied shoelaces",
+        "Italian": "Sta correndo in discesa con i lacci delle scarpe slacciati"
+    },
+    {
+        "English": "She falls into the sea from the sailing boat",
+        "Italian": "Cade in mare dalla barca a vela"
+    },
+    {
+        "English": "She is fixing an unplugged TV",
+        "Italian": "Sta riparando una TV scollegata"
+    },
+    {
+        "English": "She is pouring dirty water",
+        "Italian": "Sta versando acqua sporca"
+    },
+    {
+        "English": "He is swimming against a rip current",
+        "Italian": "Sta nuotando controcorrente"
+    },
+    {
+        "English": "She is walking on the side of a cliff",
+        "Italian": "Sta camminando sul lato di un dirupo"
+    },
+    {
+        "English": "He is hiking in the mountains with a map",
+        "Italian": "Sta facendo un'escursione in montagna con una mappa"
+    },
+    {
+        "English": "He is leaving the stove off before heading out",
+        "Italian": "Sta lasciando la stufa spenta prima di uscire"
+    },
+    {
+        "English": "She didn’t see the boy coming",
+        "Italian": "Lei non ha visto arrivare il ragazzo"
+    },
+    {
+        "English": "She is sunbathing without sunscreen",
+        "Italian": "Sta prendendo il sole senza protezione solare"
+    },
+    {
+        "English": "He is driving fast on the freeway",
+        "Italian": "Sta guidando veloce in autostrada"
+    },
+    {
+        "English": "The young boy is cutting meat with a knife",
+        "Italian": "Il ragazzo sta tagliando la carne con un coltello"
+    },
+    {
+        "English": "She is crossing the street looking both ways",
+        "Italian": "Sta attraversando la strada guardando in entrambe le direzioni"
+    },
+    {
+        "English": "The child is playing with small pieces of plastic",
+        "Italian": "Il bambino sta giocando con piccoli pezzi di plastica"
+    },
+    {
+        "English": "He is lighting a fire in a dry field",
+        "Italian": "Sta accendendo un fuoco in un campo secco"
+    },
+    {
+        "English": "The pregnant woman is eating overcooked meat",
+        "Italian": "La donna incinta sta mangiando carne troppo cotta"
+    },
+    {
+        "English": "She fell asleep on the bench",
+        "Italian": "Si è addormentata sul panchina"
+    },
+    {
+        "English": "She doesn't drink after exercising",
+        "Italian": "Non beve dopo lo sport"
+    },
+    {
+        "English": "She sleeps with contact lenses off",
+        "Italian": "Dorme senza le lenti a contatto"
+    },
+    {
+        "English": "He passes above the scaffolding",
+        "Italian": "Passa sopra l'impalcatura"
+    },
+    {
+        "English": "She is skiing out of town",
+        "Italian": "Sta sciando fuori città"
+    },
+    {
+        "English": "He is hanging from a thick branch",
+        "Italian": "È appeso a un ramo spesso"
+    },
+    {
+        "English": "She crosses roads after checking",
+        "Italian": "Attraversa la strada dopo aver controllato"
+    },
+    {
+        "English": "He is washing fruits before eating them",
+        "Italian": "Sta lavando la frutta prima di mangiarla"
+    },
+    {
+        "English": "He drives along the highway worried",
+        "Italian": "Guida lungo l'autostrada preoccupato"
+    },
+    {
+        "English": "The child is playing with pills",
+        "Italian": "Il bambino sta giocando con le pillole"
+    },
+    {
+        "English": "She leaned too far over the balcony",
+        "Italian": "Si è sporta troppo sul balcone"
+    },
+    {
+        "English": "He is driving in the fog with lights",
+        "Italian": "Sta guidando nella nebbia con le luci"
+    },
+    {
+        "English": "He is showing a red flag to the elephant",
+        "Italian": "Sta mostrando una bandiera rossa all'elefante"
+    },
+    {
+        "English": "She doesn't drink after dinner",
+        "Italian": "Non beve dopo cena"
+    },
+    {
+        "English": "He downloaded an expensive app",
+        "Italian": "Ha scaricato un'app costosa"
+    },
+    {
+        "English": "She has a lit firework in her garden",
+        "Italian": "Lei ha un fuoco d'artificio acceso nel suo giardino"
+    },
+    {
+        "English": "She walks on the dry floor",
+        "Italian": "Cammina sul pavimento asciutto"
+    },
+    {
+        "English": "He is lighting a fire in a wet field",
+        "Italian": "Sta accendendo un fuoco in un campo bagnato"
+    },
+    {
+        "English": "He is playing with an unloaded gun",
+        "Italian": "Sta giocando con una pistola scarica"
+    },
+    {
+        "English": "She is diving with an empty tank",
+        "Italian": "Si sta immergendo con una bombola vuota"
+    },
+    {
+        "English": "He is walking over thin ice",
+        "Italian": "Sta camminando sul ghiaccio sottile"
+    },
+    {
+        "English": "She is playing with animals on the farm",
+        "Italian": "Sta giocando con gli animali nella fattoria"
+    },
+    {
+        "English": "He runs on the street",
+        "Italian": "Lui corre per strada"
+    },
+    {
+        "English": "She got lost in the mountains in the morning",
+        "Italian": "Si è persa in montagna la mattina"
+    },
+    {
+        "English": "She is cutting her shirt",
+        "Italian": "Si sta tagliando la maglietta"
+    },
+    {
+        "English": "He is driving a car after drinking alcohol",
+        "Italian": "Sta guidando un'auto dopo aver bevuto alcolici"
+    },
+    {
+        "English": "She is drying her hair with wet hands",
+        "Italian": "Si sta asciugando i capelli con le mani bagnate"
+    },
+    {
+        "English": "She leaned too far over the pool",
+        "Italian": "Si è sporta troppo sulla piscina"
+    },
+    {
+        "English": "She played with fire literally",
+        "Italian": "Ha giocato con il fuoco letteralmente"
+    },
+    {
+        "English": "She offered a drink to a stranger",
+        "Italian": "Ha offerto un drink a uno sconosciuto"
+    },
+    {
+        "English": "He is swimming under strong sunlight",
+        "Italian": "Sta nuotando sotto un forte sole"
+    },
+    {
+        "English": "He is texting while attending the conference",
+        "Italian": "Sta mandando messaggi mentre partecipa alla conferenza"
+    },
+    {
+        "English": "He is standing over a railing",
+        "Italian": "Lui è in piedi sopra una ringhiera"
+    },
+    {
+        "English": "He is hanging from a thin branch",
+        "Italian": "È appeso a un ramo sottile"
+    },
+    {
+        "English": "The child is near the fountain",
+        "Italian": "Il bambino è vicino alla fontana"
+    },
+    {
+        "English": "He plunges into shallow water",
+        "Italian": "Si tuffa in acque basse"
+    },
+    {
+        "English": "The electrician is fixing live wires",
+        "Italian": "L'elettricista sta riparando fili elettrici fili"
+    },
+    {
+        "English": "She is playing with firecrackers indoors",
+        "Italian": "Sta giocando con i petardi in casa"
+    },
+    {
+        "English": "She sits in a wheelchair",
+        "Italian": "È seduta su una sedia a rotelle"
+    },
+    {
+        "English": "He is eating fruits without washing them",
+        "Italian": "Sta mangiando frutta senza lavarla"
+    },
+    {
+        "English": "The child is taking candy from a relative",
+        "Italian": "Il bambino sta prendendo caramelle da un parente"
+    },
+    {
+        "English": "She played with fire metaphorically",
+        "Italian": "Ha giocato con il fuoco metaforicamente"
+    },
+    {
+        "English": "He postponed the physical exam",
+        "Italian": "Ha rimandato la visita medica"
+    },
+    {
+        "English": "She is crossing the street looking one way",
+        "Italian": "Sta attraversando la strada guardando in una direzione"
+    },
+    {
+        "English": "He is lighting a fire in the fireplace",
+        "Italian": "Sta accendendo un fuoco nel camino"
+    },
+    {
+        "English": "She is diving with a full tank",
+        "Italian": "Si sta immergendo con una bombola piena"
+    },
+    {
+        "English": "He eats expired hazelnuts",
+        "Italian": "Mangia nocciole scadute"
+    },
+    {
+        "English": "She holds the railing while climbing",
+        "Italian": "Si tiene alla ringhiera mentre sale"
+    },
+    {
+        "English": "He is riding a motorcycle with a helmet",
+        "Italian": "Sta guidando una motocicletta con il casco"
+    },
+    {
+        "English": "He is taking a broken elevator",
+        "Italian": "Sta prendendo un ascensore rotto"
+    },
+    {
+        "English": "The man is playing with small pieces of plastic",
+        "Italian": "L'uomo sta giocando con piccoli pezzi di plastica"
+    },
+    {
+        "English": "He is touching a live wire",
+        "Italian": "Sta toccando un filo elettrico attivo"
+    },
+    {
+        "English": "He is driving at night with headlights",
+        "Italian": "Sta guidando di notte con i fari"
+    },
+    {
+        "English": "He is taking a cab after drinking alcohol",
+        "Italian": "Sta prendendo un taxi dopo aver bevuto alcolici"
+    },
+    {
+        "English": "He dived into the pool without checking the depth",
+        "Italian": "Si è tuffato in piscina senza controllare la profondità"
+    },
+    {
+        "English": "He is cycling without brakes",
+        "Italian": "Sta pedalando senza freni"
+    },
+    {
+        "English": "He shelters from lightning strikes under a tree",
+        "Italian": "Si ripara dai fulmini sotto un albero"
+    },
+    {
+        "English": "She has a lit firework in her hand",
+        "Italian": "Lei ha un fuoco d'artificio acceso in mano"
+    },
+    {
+        "English": "She is putting a tray in the stove with a mitt",
+        "Italian": "Sta mettendo un vassoio nel forno con un guanto"
+    },
+    {
+        "English": "He plunges into deep water",
+        "Italian": "Si tuffa in acque profonde"
+    },
+    {
+        "English": "She is blowing out candles before leaving the room",
+        "Italian": "Sta spegnendo le candele prima di uscire dalla stanza"
+    },
+    {
+        "English": "He walked while reading his phone",
+        "Italian": "Ha camminato leggendo il telefono"
+    },
+    {
+        "English": "She is feeding bears in the forest",
+        "Italian": "Sta dando da mangiare agli orsi nella foresta"
+    },
+    {
+        "English": "He walked while holding the phone",
+        "Italian": "Ha camminato tenendo il telefono in mano"
+    },
+    {
+        "English": "He is trying to take a book from the bottom shelf",
+        "Italian": "Sta cercando di prendere un libro dallo scaffale basso"
+    },
+    {
+        "English": "He downloaded an unknown app",
+        "Italian": "Ha scaricato un'app sconosciuta"
+    },
+    {
+        "English": "He crossed the intersection at a green light",
+        "Italian": "Ha attraversato l'incrocio con il semaforo verde"
+    },
+    {
+        "English": "He is using a chainsaw without safety gear",
+        "Italian": "Sta usando una motosega senza dispositivi di sicurezza"
+    },
+    {
+        "English": "He postponed the holiday",
+        "Italian": "Ha rimandato la vacanza"
+    },
+    {
+        "English": "He got a cramp while jogging",
+        "Italian": "Ha avuto un crampo mentre faceva jogging"
+    },
+    {
+        "English": "She is touching a broken glass",
+        "Italian": "Sta toccando un bicchiere rotto"
+    }
 ]
