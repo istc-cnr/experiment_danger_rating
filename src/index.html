@@ -19,22 +19,32 @@
         show_progress_bar: true,
         message_progress_bar: 'Progress',
         on_finish: function() {
-            const data = jsPsych.data.get();
-            const cleanTrials = data.trials
-                .filter(trial => trial.trial_type === 'sentence_rating')
-                .map(trial => ({
+            const allTrials = jsPsych.data.get().trials;
+            console.log('Raw trials:', allTrials);
+            
+            const sentenceTrials = allTrials.filter(trial => 
+                trial.trial_type === 'html-button-response' && 
+                trial.english && 
+                trial.italian
+            );
+            console.log('Sentence trials:', sentenceTrials);
+            
+            const finalData = {
+                demographics: {
+                    age: allTrials[0].age || null,
+                    gender: allTrials[0].gender || null
+                },
+                trials: sentenceTrials.map(trial => ({
                     english: trial.english,
                     italian: trial.italian,
                     danger_rating: trial.danger_rating,
                     response_time_ms: trial.rt,
                     trial_number: trial.trial_index
-                }));
-                
-            const finalData = {
-                trials: cleanTrials,
-                total_time_ms: data.trials[data.trials.length - 1].time_elapsed
+                })),
+                total_time_ms: allTrials[allTrials.length - 1].time_elapsed
             };
 
+            console.log('Final data being sent:', finalData);
             saveToMongoDB(finalData, userID)
                 .then(() => {
                     document.body.innerHTML = `
@@ -87,6 +97,56 @@
                 button_html: '<button class="jspsych-btn" style="background-color: #3498db; color: white; font-size: 18px; padding: 10px 30px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">%choice%</button>'
             };
 
+            const demographics = {
+                type: jsPsychHtmlButtonResponse,
+                data: {
+                    trial_type: 'demographics'
+                },
+                stimulus: function() {
+                    return `
+                        <div class="demographics-container">
+                            <h2>Demographic Information</h2>
+                            <div class="form-group">
+                                <label for="age">Age:</label>
+                                <input type="number" id="age" min="18" max="100" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender:</label>
+                                <select id="gender" required>
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="prefer-not">Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                    `;
+                },
+                choices: ['Continue'],
+                button_html: '<button class="jspsych-btn" style="background-color: #3498db; color: white; font-size: 18px; padding: 10px 30px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">%choice%</button>',
+                on_load: function() {
+                    const continueBtn = document.querySelector('.jspsych-btn');
+                    continueBtn.disabled = true;
+
+                    function validateForm() {
+                        const age = document.getElementById('age')?.value;
+                        const gender = document.getElementById('gender')?.value;
+                        if (age && gender) {
+                            continueBtn.disabled = false;
+                            jsPsych.data.get().addToLast({
+                                age: parseInt(age),
+                                gender: gender
+                            });
+                        } else {
+                            continueBtn.disabled = true;
+                        }
+                    }
+
+                    document.getElementById('age')?.addEventListener('input', validateForm);
+                    document.getElementById('gender')?.addEventListener('change', validateForm);
+                }
+            };
+
             const instructions = {
                 type: jsPsychHtmlButtonResponse,
                 stimulus: instructionsContent,
@@ -97,6 +157,11 @@
             let currentRating = null;
             const trials = sentences.map(pair => ({
                 type: jsPsychHtmlButtonResponse,
+                data: {
+                    trial_type: 'html-button-response',
+                    english: pair.English,
+                    italian: pair.Italian
+                },
                 stimulus: function() {
                     currentRating = null;
                     return `
@@ -153,7 +218,6 @@
                     data.english = pair.English;
                     data.italian = pair.Italian;
                     data.danger_rating = currentRating;
-                    data.trial_type = 'sentence_rating';
                     data.user_id = userID;
                 }
             }));
@@ -162,7 +226,8 @@
                 type: jsPsychHtmlButtonResponse,
                 stimulus: `
                     <h2>Thank you!</h2>
-                    <p>The experiment is now complete.</p>
+                    <p>Please click 'Finish' to save your data.</p>
+                    <p>Wait a minute before closing the window.</p>
                 `,
                 choices: ['Finish'],
                 button_html: '<button class="jspsych-btn" style="background-color: #3498db; color: white; font-size: 18px; padding: 10px 30px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">%choice%</button>'
@@ -171,6 +236,7 @@
             // Create timeline
             const timeline = [
                 welcome,
+                demographics,
                 instructions,
                 ...trials,
                 end
