@@ -3,27 +3,21 @@ function generateUID() {
 }
 
 async function saveToMongoDB(data, userID) {
-    const apiUrl = window.location.hostname === 'localhost' 
-        ? 'http://localhost:8888/.netlify/functions/save-data'
-        : 'https://experimentcnr.netlify.app/.netlify/functions/save-data';
-    
-    console.log('Attempting to save data to:', apiUrl); // Debug log
     try {
-        const response = await fetch(apiUrl, {
+        const response = await fetch('/.netlify/functions/save-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
+                ...data,
                 user_id: userID,
-                timestamp: new Date().toISOString(),
-                ...data
+                timestamp: new Date().toISOString()
             })
         });
 
         if (!response.ok) {
-            const errorData = await response.text();
-            throw new Error(`HTTP error! status: ${response.status}, message: ${errorData}`);
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         return await response.json();

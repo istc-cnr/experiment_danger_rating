@@ -1,7 +1,6 @@
 const { MongoClient } = require('mongodb');
 
 exports.handler = async (event, context) => {
-  // Enable CORS
   const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': 'Content-Type',
@@ -10,45 +9,53 @@ exports.handler = async (event, context) => {
 
   // Handle preflight requests
   if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 200, headers, body: '' };
+  }
+
+  if (!process.env.MONGODB_URI) {
+    console.error('MONGODB_URI is not defined');
     return {
-      statusCode: 200,
+      statusCode: 500,
       headers,
-      body: ''
+      body: JSON.stringify({ error: 'Database configuration error' })
     };
   }
 
-  if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
-      headers,
-      body: JSON.stringify({ error: 'Method not allowed' })
-    };
-  }
-
+  let client;
   try {
-    const client = new MongoClient(process.env.MONGODB_URI);
+    client = new MongoClient(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 5000
+    });
+
     await client.connect();
+    console.log('Connected to MongoDB');
     
     const data = JSON.parse(event.body);
     const db = client.db('CNR_Danger_Rating');
     const collection = db.collection('user_responses');
     
     const result = await collection.insertOne(data);
-    await client.close();
     
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({ 
-        success: true, 
-        id: result.insertedId 
-      })
+      body: JSON.stringify({ success: true, id: result.insertedId })
     };
   } catch (error) {
+    console.error('Database error:', error);
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: error.message })
+      body: JSON.stringify({ 
+        error: 'Database operation failed',
+        details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      })
     };
+  } finally {
+    if (client) {
+      await client.close();
+    }
   }
 };

@@ -50,8 +50,9 @@
                     document.body.innerHTML = `
                         <div style="text-align: center; margin-top: 50px;">
                             <h2>Thank you for participating!</h2>
-                            <p>Your responses have been saved.</p>
-                            <p>You may close this window.</p>
+                            <h2>Grazie per aver partecipato!</h2>
+                            <p>Your responses have been saved / Le tue risposte sono state salvate.</p>
+                            <p>You may close this window / Puoi chiudere questa finestra.</p>
                         </div>
                     `;
                 }).catch(error => {
@@ -90,11 +91,13 @@
             const welcome = {
                 type: jsPsychHtmlButtonResponse,
                 stimulus: `
-                    <h1>Welcome to the Sentence Danger Rating Experiment</h1>
-                    <p>You will evaluate English-Italian sentence pairs for their level of danger.</p>
+                    <h1>Welcome to the Sentence Danger Rating Experiment </h1>
+                    <h1>Benvenuto nell'esperimento sul livello di pericolosità delle frasi </h1>
+                    <p class="en">You will evaluate English-Italian sentence pairs for their level of danger.</p>
+                    <p class="it">Valuterai il livello di pericolosità di coppie di frasi in inglese e italiano.</p>
                 `,
                 choices: ['Start the experiment'],
-                button_html: '<button class="jspsych-btn" style="background-color: #3498db; color: white; font-size: 18px; padding: 10px 30px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">%choice%</button>'
+        button_thtml: '<button class="jspsych-btn" style="background-color: #3498db; color: white; font-size: 18px; padding: 10px 30px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">%choice%</button>'
             };
 
             const demographics = {
@@ -105,18 +108,18 @@
                 stimulus: function() {
                     return `
                         <div class="demographics-container">
-                            <h2>Demographic Information</h2>
+                            <h2>Demographic Information/ Informazioni demografiche</h2>
                             <div class="form-group">
-                                <label for="age">Age:</label>
+                                <label for="age">Age / Età:</label>
                                 <input type="number" id="age" min="18" max="100" required>
                             </div>
                             <div class="form-group">
-                                <label for="gender">Gender:</label>
+                                <label for="gender">Gender/ Genere:</label>
                                 <select id="gender" required>
-                                    <option value="">Select gender</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="prefer-not">Prefer not to say</option>
+                                    <option value="">Select gender/ Seleziona genere</option>
+                                    <option value="male">Male/ Maschio</option>
+                                    <option value="female">Female/ Femmina</option>
+                                    <option value="prefer-not">Prefer not to say/ Preferisco non dirlo</option>
                                 </select>
                             </div>
                         </div>
@@ -170,7 +173,7 @@
                             <div class="italian" role="text" lang="it">${pair.Italian}</div>
                         </div>
                         <div class="rating-container" role="region" aria-label="Danger Rating">
-                            <h3>How dangerous is this sentence?</h3>
+                            <h3>How dangerous is this situation? / Quanto è pericolosa questa situazione?</h3>
                             <div class="rating-scale">
                                 <div class="rating-buttons" role="radiogroup" aria-label="Danger rating scale from 0 to 9">
                                     ${Array.from({length: 10}, (_, i) => 
@@ -225,9 +228,11 @@
             const end = {
                 type: jsPsychHtmlButtonResponse,
                 stimulus: `
-                    <h2>Thank you!</h2>
-                    <p>Please click 'Finish' to save your data.</p>
-                    <p>Wait a minute before closing the window.</p>
+                    <h2>Thank you / Grazie!</h2>
+                    <p><strong>Please click 'Finish' to save your data.</strong></p>
+                    <p><strong>Per favore, clicca su 'Fine' per salvare i tuoi dati.</strong></p>
+                    <p><strong>Wait a minute before closing the window.</strong></p>
+                    <p><strong>Aspetta un minuto prima di chiudere la finestra.</strong></p>
                 `,
                 choices: ['Finish'],
                 button_html: '<button class="jspsych-btn" style="background-color: #3498db; color: white; font-size: 18px; padding: 10px 30px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">%choice%</button>'
