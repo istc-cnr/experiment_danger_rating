@@ -74,7 +74,7 @@
                 : window.location.pathname + '/';
                 
             const [sentencesResponse, instructionsResponse] = await Promise.all([
-                fetch(new URL('unique.json', window.location.href)),
+                fetch(new URL('data/unique.json', window.location.href)),
                 fetch(new URL('instructions.html', window.location.href))
             ]);
             
