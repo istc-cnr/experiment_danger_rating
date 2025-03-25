@@ -1,15 +1,15 @@
-# Sentence Danger Rating Experiment
+# Size Pair Rating Experiment
 
-A web-based experiment for collecting danger ratings of English-Italian sentence pairs using jsPsych library.
+A web-based experiment for collecting size ratings of English-Italian pairs using jsPsych library.
 
 ## Overview
 
-This application presents participants with English-Italian sentence pairs and asks them to rate the perceived danger level of each sentence on a scale from 0 (Very Safe) to 9 (Very Dangerous). The responses are collected and stored in MongoDB.
+This application presents participants with English-Italian NN pairs and asks them to rate the perceived size of each pair on a scale from 0 (Small) to 9 (Huge). The responses are collected and stored in MongoDB.
 
 ## Features
 
 - Responsive web interface for sentence presentation
-- 0-9 danger rating scale
+- 0-9 size rating scale
 - Progress bar tracking
 - Data persistence using MongoDB
 
@@ -81,7 +81,7 @@ Responses are stored in MongoDB with the following structure:
     trials: [{
         english: string,
         italian: string,
-        danger_rating: number,
+        size_rating: number,
         response_time_ms: number,
         trial_number: number
     }],

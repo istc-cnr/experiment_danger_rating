@@ -37,7 +37,7 @@
                 trials: sentenceTrials.map(trial => ({
                     english: trial.english,
                     italian: trial.italian,
-                    danger_rating: trial.danger_rating,
+                    size_rating: trial.size_rating,
                     response_time_ms: trial.rt,
                     trial_number: trial.trial_index
                 })),
@@ -74,7 +74,7 @@
                 : window.location.pathname + '/';
                 
             const [sentencesResponse, instructionsResponse] = await Promise.all([
-                fetch(new URL('randomized_sentences.json', window.location.href)),
+                fetch(new URL('unique.json', window.location.href)),
                 fetch(new URL('instructions.html', window.location.href))
             ]);
             
@@ -91,10 +91,10 @@
             const welcome = {
                 type: jsPsychHtmlButtonResponse,
                 stimulus: `
-                    <h1>Welcome to the Sentence Danger Rating Experiment </h1>
-                    <h1>Benvenuto nell'esperimento sul livello di pericolosità delle frasi </h1>
-                    <p class="en">You will evaluate English-Italian sentence pairs for their level of danger.</p>
-                    <p class="it">Valuterai il livello di pericolosità di coppie di frasi in inglese e italiano.</p>
+                    <h1>Welcome to the Size Pair Rating Experiment </h1>
+                    <h1>Benvenuto nell'esperimento sul livello di pericolosità delle coppie di frasi</h1>
+                    <p class="en">You will evaluate English-Italian pairs for their size.</p>
+                    <p class="it">Valuterai le coppie inglese-italiano per la loro grandezza.</p>
                 `,
                 choices: ['Start the experiment'],
         button_thtml: '<button class="jspsych-btn" style="background-color: #3498db; color: white; font-size: 18px; padding: 10px 30px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">%choice%</button>'
@@ -172,10 +172,10 @@
                             <div class="english" role="text" lang="en">${pair.English}</div>
                             <div class="italian" role="text" lang="it">${pair.Italian}</div>
                         </div>
-                        <div class="rating-container" role="region" aria-label="Danger Rating">
-                            <h3>How dangerous is this situation? / Quanto è pericolosa questa situazione?</h3>
+                        <div class="rating-container" role="region" aria-label="Size Rating">
+                            <h3>How big is this object? / Quanto è grande questo oggetto?</h3>
                             <div class="rating-scale">
-                                <div class="rating-buttons" role="radiogroup" aria-label="Danger rating scale from 0 to 9">
+                                <div class="rating-buttons" role="radiogroup" aria-label="Size rating scale from 0 to 9">
                                     ${Array.from({length: 10}, (_, i) => 
                                         `<button 
                                             class="rating-button" 
@@ -187,8 +187,8 @@
                                     ).join('')}
                                 </div>
                                 <div class="scale-labels">
-                                    <div class="scale-label left" aria-hidden="true">Very Safe</div>
-                                    <div class="scale-label right" aria-hidden="true">Very Dangerous</div>
+                                    <div class="scale-label left" aria-hidden="true">Small</div>
+                                    <div class="scale-label right" aria-hidden="true">Huge</div>
                                 </div>
                             </div>
                         </div>
@@ -220,7 +220,7 @@
                 on_finish: function(data) {
                     data.english = pair.English;
                     data.italian = pair.Italian;
-                    data.danger_rating = currentRating;
+                    data.size_rating = currentRating;
                     data.user_id = userID;
                 }
             }));

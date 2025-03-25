@@ -33,7 +33,7 @@ exports.handler = async (event, context) => {
     console.log('Connected to MongoDB');
     
     const data = JSON.parse(event.body);
-    const db = client.db('CNR_Danger_Rating');
+    const db = client.db('CNR_Size_Rating');
     const collection = db.collection('user_responses');
     
     const result = await collection.insertOne(data);

@@ -1,0 +1,498 @@
+[
+    {
+        "English": "a salad bowl / a soy bowl",
+        "Italian": "un'insalatiera / una ciotola per la soya"
+    },
+    {
+        "English": "a serving tray / a tea tray",
+        "Italian": "un vassoio da portata / un vassoio da tè"
+    },
+    {
+        "English": "a church bell / a school bell",
+        "Italian": "campana della chiesa / campana della scuola"
+    },
+    {
+        "English": "a trash bin / a bread bin",
+        "Italian": "un cestino della spazzatura / un contenitore del pane"
+    },
+    {
+        "English": "a soccer ball / a cricket ball",
+        "Italian": "una palla da calcio / una palla da cricket"
+    },
+    {
+        "English": "a concert speaker / a home speaker",
+        "Italian": "un altoparlante da concerto / un altoparlante domestico"
+    },
+    {
+        "English": "a swimming pool / a fish pool",
+        "Italian": "una piscina per nuotare / una vasca per i pesci"
+    },
+    {
+        "English": "a basket ball / a golf ball",
+        "Italian": "una palla da basket / una palla da golf"
+    },
+    {
+        "English": "an inflatable pool / an olympic pool",
+        "Italian": "una piscina gonfiabile / una piscina olimpionica"
+    },
+    {
+        "English": "a pasta strainer / a tea strainer",
+        "Italian": "uno scolapasta / un colino per il tè"
+    },
+    {
+        "English": "an industrial scale / a kitchen scale",
+        "Italian": "una bilancia industriale / una bilancia da cucina"
+    },
+    {
+        "English": "a passenger train / a model train",
+        "Italian": "un treno passeggeri / un modellino di treno"
+    },
+    {
+        "English": "a cement bag / a paper bag",
+        "Italian": "un sacco di cemento / un sacchetto di carta"
+    },
+    {
+        "English": "a travel purse / a hand purse",
+        "Italian": "una borsa da viaggio / una borsa a mano"
+    },
+    {
+        "English": "a text book / a day book",
+        "Italian": "un libro di testo / un diario"
+    },
+    {
+        "English": "a serving spoon / a sugar spoon",
+        "Italian": "un cucchiaio da portata / un cucchiaino da zucchero"
+    },
+    {
+        "English": "a tube radio / a transistor radio",
+        "Italian": "radio a valvole / radio a transistor"
+    },
+    {
+        "English": "a writing desk / a reception desk",
+        "Italian": "una scrivania / un banco della reception"
+    },
+    {
+        "English": "a checked bag / a carry-on bag",
+        "Italian": "un bagaglio registrato / una borsa a mano"
+    },
+    {
+        "English": "a ping-pong table / a kitchen table",
+        "Italian": "un tavolo da ping-pong / un tavolo da cucina"
+    },
+    {
+        "English": "a garden bench / a piano bench",
+        "Italian": "una panca da giardino / una panca da pianoforte"
+    },
+    {
+        "English": "a street lamp / a bedside lamp",
+        "Italian": "una lampada di strada / una lampada da letto"
+    },
+    {
+        "English": "a patio heater / a personal heater",
+        "Italian": "un riscaldatore da patio / un riscaldatore personale"
+    },
+    {
+        "English": "a volleyball / a tennis ball",
+        "Italian": "una pallavolo / una pallina da tennis"
+    },
+    {
+        "English": "a shopping purse / a change purse",
+        "Italian": "una borsa per la spesa / un portamonete"
+    },
+    {
+        "English": "a stage lamp / a task lamp",
+        "Italian": "una lampada da palcoscenico / una lampada da lavoro"
+    },
+    {
+        "English": "a ceiling lamp / a desk lamp",
+        "Italian": "una lampada da soffitto / una lampada da scrivania"
+    },
+    {
+        "English": "a dress mirror / a face mirror",
+        "Italian": "uno specchio per abiti / uno specchio per il viso"
+    },
+    {
+        "English": "a cooking pot / a tea pot",
+        "Italian": "una pentola / una teiera"
+    },
+    {
+        "English": "a flower pot / a tea pot",
+        "Italian": "un vaso di fiori / una teiera"
+    },
+    {
+        "English": "a serving dish / a butter dish",
+        "Italian": "un piatto da portata / un piatto per burro"
+    },
+    {
+        "English": "a tool case / a pencil case",
+        "Italian": "cassetta degli attrezzi / astuccio per matite"
+    },
+    {
+        "English": "a floor vase / a bud vase",
+        "Italian": "un vaso da pavimento / un vaso per germogli"
+    },
+    {
+        "English": "garden scissors / nail scissors",
+        "Italian": "forbici da giardino / forbici per unghie"
+    },
+    {
+        "English": "a kitchen knife / a pocket knife",
+        "Italian": "un coltello da cucina / un coltellino tascabile"
+    },
+    {
+        "English": "a beer mug / a tea mug",
+        "Italian": "un boccale da birra / una tazza da tè"
+    },
+    {
+        "English": "a magazine rack / a spice rack",
+        "Italian": "un portariviste / un portaspezie"
+    },
+    {
+        "English": "a dining hall / an entry hall",
+        "Italian": "sala da pranzo / ingresso"
+    },
+    {
+        "English": "a library ladder / a bed ladder",
+        "Italian": "una scala della biblioteca / una scala di casa"
+    },
+    {
+        "English": "a soup bowl / a dip bowl",
+        "Italian": "una ciotola per zuppa / una ciotola per salse"
+    },
+    {
+        "English": "a milk bottle / a juice bottle",
+        "Italian": "una bottiglia di latte / una bottiglia di succo di frutta"
+    },
+    {
+        "English": "a conference table / a coffee table",
+        "Italian": "un tavolo da conferenza / un tavolino da caffè"
+    },
+    {
+        "English": "a soup spoon / a tea spoon",
+        "Italian": "un cucchiaio da zuppa / un cucchiaino da tè"
+    },
+    {
+        "English": "a bowling ball / a billiard ball",
+        "Italian": "una palla da bowling / una palla da biliardo"
+    },
+    {
+        "English": "a knitting needle / a tattoo needle",
+        "Italian": "ferro da maglia / ago per tatuaggi"
+    },
+    {
+        "English": "a butcher knife / a pen knife",
+        "Italian": "un coltello da macellaio / un temperino"
+    },
+    {
+        "English": "a knitting needle / a sewing needle",
+        "Italian": "ago da cucito / ago da maglia"
+    },
+    {
+        "English": "a floor rug / a bath rug",
+        "Italian": "un tappeto / un tappeto da bagno"
+    },
+    {
+        "English": "a shopping cart / a tea cart",
+        "Italian": "un carrello della spesa / un carrello da tè"
+    },
+    {
+        "English": "a freight train / a toy train",
+        "Italian": "un treno merci / un trenino giocattolo"
+    },
+    {
+        "English": "a medicine rack / a spice rack",
+        "Italian": "portamedicinali / un portaspezie"
+    },
+    {
+        "English": "a travel bag / a makeup bag",
+        "Italian": "una borsa da viaggio / una borsa per il trucco"
+    },
+    {
+        "English": "a carpet roll / a paper roll",
+        "Italian": "un rotolo di tappeto / un rotolo di carta"
+    },
+    {
+        "English": "an industrial whisk / a hand whisk",
+        "Italian": "una frusta a mano / una frusta industriale"
+    },
+    {
+        "English": "a bath mat / a yoga mat",
+        "Italian": "un tappetino da bagno / un tappetino da yoga"
+    },
+    {
+        "English": "a banquet table / a coffee table",
+        "Italian": "un tavolo da banchetto / un tavolino da caffè"
+    },
+    {
+        "English": "a bar stool / a piano stool",
+        "Italian": "uno sgabello da bar / uno sgabello da pianoforte"
+    },
+    {
+        "English": "a seatbelt strap / a handbag strap",
+        "Italian": "una cinghia per borsa / una cinghia per cintura di sicurezza"
+    },
+    {
+        "English": "a laundry bag / a tea bag",
+        "Italian": "un sacchetto per la biancheria / una bustina di tè"
+    },
+    {
+        "English": "a billiard table / a card table",
+        "Italian": "un tavolo da biliardo / un tavolo da gioco"
+    },
+    {
+        "English": "a soccer ball / a billiard ball",
+        "Italian": "un pallone da calcio / una palla da biliardo"
+    },
+    {
+        "English": "a cookie tin / a mint tin",
+        "Italian": "una scatola di biscotti / una scatola di mentine"
+    },
+    {
+        "English": "a bath towel / a dish towel",
+        "Italian": "un asciugamano da bagno / uno strofinaccio"
+    },
+    {
+        "English": "garden gloves / medical gloves",
+        "Italian": "guanti da giardino / guanti medici"
+    },
+    {
+        "English": "a cargo plane / a model plane",
+        "Italian": "un aereo cargo / un modellino di aereo"
+    },
+    {
+        "English": "a dining set / a tea set",
+        "Italian": "un set da pranzo / un set da tè"
+    },
+    {
+        "English": "a pneumatic drill / a hand drill",
+        "Italian": "un trapano pneumatico / un trapano a mano"
+    },
+    {
+        "English": "a water glass / a shot glass",
+        "Italian": "un bicchiere d'acqua / un bicchiere da shot"
+    },
+    {
+        "English": "a wall map / a pocket map",
+        "Italian": "una mappa da parete / una mappa tascabile"
+    },
+    {
+        "English": "a garage door / a cabinet door",
+        "Italian": "una porta del garage / l'anta di un mobile"
+    },
+    {
+        "English": "a stage microphone / a cellular microphone",
+        "Italian": "microfono da palco / microfono del cellulare"
+    },
+    {
+        "English": "a dinner table / a tea table",
+        "Italian": "un tavolo da pranzo / un tavolo da tè"
+    },
+    {
+        "English": "gardening scissors / tailor’s scissors",
+        "Italian": "forbici da giardinaggio / forbici da sarto"
+    },
+    {
+        "English": "a moving box / a lunch box",
+        "Italian": "una scatola per traslochi / una scatola per il pranzo"
+    },
+    {
+        "English": "a garden fork / a dinner fork",
+        "Italian": "una forca da giardino / una forchetta da tavola"
+    },
+    {
+        "English": "a ceiling fan / a desk fan",
+        "Italian": "un ventilatore da soffitto / un ventilatore da scrivania"
+    },
+    {
+        "English": "a bench grinder / a hand grinder",
+        "Italian": "una smerigliatrice da banco / una smerigliatrice manuale"
+    },
+    {
+        "English": "a floor lamp / a desk lamp",
+        "Italian": "una lampada da terra / una lampada da scrivania"
+    },
+    {
+        "English": "a bottle of wine / a bottle of perfume",
+        "Italian": "una bottiglia di vino / una bottiglia di profumo"
+    },
+    {
+        "English": "a vanilla box / a salt box",
+        "Italian": "una scatola di vaniglia / una scatola di sale"
+    },
+    {
+        "English": "ski glasses / reading glasses",
+        "Italian": "occhiali da sci / occhiali da lettura"
+    },
+    {
+        "English": "a sofa cushion / a pin cushion",
+        "Italian": "un cuscino per divano / un puntaspilli"
+    },
+    {
+        "English": "a beer glass / a whiskey glass",
+        "Italian": "un bicchiere da birra / un bicchiere da whisky"
+    },
+    {
+        "English": "a bread knife / a fruit knife",
+        "Italian": "un coltello per il pane / un coltello da frutta"
+    },
+    {
+        "English": "an executive desk / a study desk",
+        "Italian": "una scrivania direzionale / una scrivania da studio"
+    },
+    {
+        "English": "a water bottle / a pill bottle",
+        "Italian": "una bottiglia d'acqua / una boccetta di pillole"
+    },
+    {
+        "English": "a jacuzzi bathtub / a standard bathtub",
+        "Italian": "una vasca idromassaggio / una vasca da bagno classica"
+    },
+    {
+        "English": "a grocery bag / a lunch bag",
+        "Italian": "una borsa della spesa / una borsa per il pranzo"
+    },
+    {
+        "English": "a soccer ball / a ping pong ball",
+        "Italian": "un pallone da calcio / una palla da ping pong"
+    },
+    {
+        "English": "a laundry bag / a coin bag",
+        "Italian": "un sacchetto per la biancheria / un sacchetto per monete"
+    },
+    {
+        "English": "a table saw / a hand saw",
+        "Italian": "una sega a mano / una sega da tavolo"
+    },
+    {
+        "English": "a golf bag / a lunch bag",
+        "Italian": "una sacca da golf / una borsa per il pranzo"
+    },
+    {
+        "English": "a water pitcher / a cream pitcher",
+        "Italian": "una brocca per l'acqua / una brocca per la panna"
+    },
+    {
+        "English": "a floor mat / a coaster mat",
+        "Italian": "un tappetino da pavimento / un sottobicchiere"
+    },
+    {
+        "English": "a firefighter ladder / a step ladder",
+        "Italian": "una scala da pompiere / una scala a pioli"
+    },
+    {
+        "English": "a tower clock / a wall clock",
+        "Italian": "un orologio da torre / un orologio da parete"
+    },
+    {
+        "English": "a pool towel / a hand towel",
+        "Italian": "un asciugamano da piscina / un asciugamano per le mani"
+    },
+    {
+        "English": "a house door / a garage door",
+        "Italian": "una porta di casa / una porta del garage"
+    },
+    {
+        "English": "a beach house / a doll house",
+        "Italian": "una casa sulla spiaggia / una casa delle bambole"
+    },
+    {
+        "English": "a crane hook / a wall hook",
+        "Italian": "un gancio per gru / un gancio da muro"
+    },
+    {
+        "English": "an office chair / a folding chair",
+        "Italian": "una sedia da ufficio / una sedia pieghevole"
+    },
+    {
+        "English": "a serving dish / a soap dish",
+        "Italian": "un piatto da portata / un portasapone"
+    },
+    {
+        "English": "a wall calendar / a desk calendar",
+        "Italian": "un calendario da parete / un calendario da scrivania"
+    },
+    {
+        "English": "a waste container / a tea container",
+        "Italian": "un contenitore per i rifiuti / un contenitore per il tè"
+    },
+    {
+        "English": "an electric broom / a hand broom",
+        "Italian": "una scopa elettrica / una scopa a mano"
+    },
+    {
+        "English": "a beach umbrella / a cocktail umbrella",
+        "Italian": "un ombrellone da spiaggia / un ombrellone da cocktail"
+    },
+    {
+        "English": "an upright bass / an electric bass",
+        "Italian": "un contrabbasso / un basso elettrico"
+    },
+    {
+        "English": "a sleeping bag / a tea bag",
+        "Italian": "un sacco a pelo / una bustina di tè"
+    },
+    {
+        "English": "a patio umbrella / a normal umbrella",
+        "Italian": "un ombrellone da patio / un ombrello normale"
+    },
+    {
+        "English": "a dressing mirror / a makeup mirror",
+        "Italian": "uno specchio per toeletta / uno specchio per il trucco"
+    },
+    {
+        "English": "a beach towel / a paper towel",
+        "Italian": "un telo da spiaggia / un tovagliolo di carta"
+    },
+    {
+        "English": "an event tent / a camping tent",
+        "Italian": "una tenda per eventi / una tenda da campeggio"
+    },
+    {
+        "English": "a fishing net / a butterfly net",
+        "Italian": "una rete da pesca / un retino per farfalle"
+    },
+    {
+        "English": "a floor lamp / a book lamp",
+        "Italian": "una lampada da terra / una lampada da libro"
+    },
+    {
+        "English": "a dining table / a bedside table",
+        "Italian": "un tavolo da pranzo / un comodino"
+    },
+    {
+        "English": "a power drill / a hand drill",
+        "Italian": "un trapano elettrico / un trapano a mano"
+    },
+    {
+        "English": "a garden pot / a seed pot",
+        "Italian": "un vaso da giardino / un vaso per semi"
+    },
+    {
+        "English": "a bread knife / a butter knife",
+        "Italian": "un coltello da pane / un coltello da burro"
+    },
+    {
+        "English": "an industrial fridge / a home fridge",
+        "Italian": "un frigorifero industriale / un frigo domestico"
+    },
+    {
+        "English": "a soup cup / a sake cup",
+        "Italian": "una tazza di zuppa / una tazza di sakè"
+    },
+    {
+        "English": "a gaming monitor / a portable monitor",
+        "Italian": "un monitor da gioco / un monitor portatile"
+    },
+    {
+        "English": "a diving board / a ironing board",
+        "Italian": "un trampolino / un asse da stiro"
+    },
+    {
+        "English": "a horse saddle / a bicycle saddle",
+        "Italian": "una sella da cavallo / una sella da bicicletta"
+    },
+    {
+        "English": "an electric guitar / a toy guitar",
+        "Italian": "una chitarra elettrica / una chitarra giocattolo"
+    }
+]
