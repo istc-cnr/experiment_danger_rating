@@ -1,3 +1,6 @@
+This is a branch for dangerousity experiment
+
+
 # Sentence Danger Rating Experiment
 
 A web-based experiment for collecting danger ratings of English-Italian sentence pairs using jsPsych library.
